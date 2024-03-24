@@ -170,6 +170,7 @@ rules:
       - separate
       - NOT discriminate
 
+  # IETF
   grandfathered:
     regex:
       - /\bgrandfather\w*\b/gi
@@ -347,23 +348,23 @@ rules:
       - plug
       - socket
 
-  # Taken out after causing author confusion numerous time.
-  # invalid:
-  #   regex:
-  #     - /\binvalid\w*\b/gi
-  #   level: warning
-  #   alternatives:
-  #     - not valid
-  #     - unenforceable
-  #     - not binding
-  #     - inoperative
-  #     - illegitimate
-  #     - incorrect
-  #     - improper
-  #     - unacceptable
-  #     - inapplicable
-  #     - revoked
-  #     - rescinded
+  invalid:
+    regex:
+      - /\binvalid\w*\b/gi
+    # IETF took out after causing author confusion numerous time.
+    level: off
+    alternatives:
+      - not valid
+      - unenforceable
+      - not binding
+      - inoperative
+      - illegitimate
+      - incorrect
+      - improper
+      - unacceptable
+      - inapplicable
+      - revoked
+      - rescinded
 
   blind:
     regex:
@@ -395,32 +396,32 @@ rules:
       - oblivious to
       - indifferent to
 
-  # This occurs in the IETF boilerplate text...
-  # right:
-  #   regex:
-  #     - /\bright\w*\b/gi
-  #   level: warning
-  #   alternatives:
-  #     - just
-  #     - fair
-  #     - good
-  #     - correct
-  #     - accurate
-  #     - precise
-  #     - official
-  #     - suitable
-  #     - ideal
-  #     - opportune
-  #     - fitting
+  right:
+    regex:
+      - /\bright\w*\b/gi
+      # IETF took out as it occurs in the IETF boilerplate text
+    level: off
+    alternatives:
+      - just
+      - fair
+      - good
+      - correct
+      - accurate
+      - precise
+      - official
+      - suitable
+      - ideal
+      - opportune
+      - fitting
 
-  # See https://github.com/ietf/terminology/issues/31
-  # blackhole:
-  #   regex:
-  #     - /\bblack[\w_-]hol\w*\b/gi
-  #   level: warning
-  #   alternatives:
-  #     - drop
-  #     - reject
-  #     - ignore
-  #     - disregard
-  #     - bypass
+  blackhole:
+    regex:
+      - /\bblack[\w_-]hol\w*\b/gi
+    # See https://github.com/ietf/terminology/issues/31
+    level: off
+    alternatives:
+      - drop
+      - reject
+      - ignore
+      - disregard
+      - bypass
