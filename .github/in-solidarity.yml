@@ -171,16 +171,138 @@ rules:
       - NOT discriminate
 
   # IETF
-  grandfathered:
+  balkanization:
     regex:
-      - /grandfather/gi
+      - /balkani[zs]/gi
     level: warning
     alternatives:
-      - exemption
-      - historical
-      - legacy status
-      - pre-approved
-      - special case
+      - bifurcation
+      - segmentation
+
+  black-market:
+    regex:
+      - /black[\w_-]*market/gi
+    level: warning
+    alternatives:
+      - illegal marketplace
+
+  black-sheep:
+    regex:
+      - /black[\w_-]*sheep/gi
+    level: warning
+    alternatives:
+      - disreputable
+
+  blackhole:
+    regex:
+      - /black[\w_-]hol/gi
+    # See https://github.com/ietf/terminology/issues/31
+    level: off
+    alternatives:
+      - drop
+      - reject
+      - ignore
+      - disregard
+      - bypass
+
+  blackmail:
+    regex:
+      - /black[\w_-]*mail/gi
+    level: warning
+    alternatives:
+      - extortion
+
+  blind:
+    regex:
+      - /blind/gi
+    level: warning
+    alternatives:
+      - visually impaired
+      - unmindful of
+      - unconcerned about
+      - negligent of
+      - unaware
+      - uncomprehending
+      - unaware
+      - uncritical
+      - unthinking
+      - hasty
+      - blocked
+      - opaque
+
+  crazy:
+    regex:
+      - /craz(y|ie)?/gi
+    level: warning
+    alternatives:
+      - malfunctioning
+      - puzzling
+      - surprising
+      - unexpected
+
+  dark-pattern:
+    regex:
+      - /dark[\w_-]*pattern/gi
+    level: warning
+    alternatives:
+      - deception pattern
+
+  deaf:
+    regex:
+      - /deaf/gi
+    level: warning
+    alternatives:
+      - hard of hearing
+      - unmoved by
+      - unaffected by
+      - unconcerned with
+      - oblivious to
+      - indifferent to
+
+  dumb:
+    regex:
+      - /dumb/gi
+    level: warning
+    alternatives:
+      - dull
+      - inarticuate
+      - incoherent
+
+  dummy:
+    regex:
+      - /dummy/gi
+    level: warning
+    alternatives:
+      - placeholder
+      - sample
+      - stand-in
+      - substitute
+
+  elder:
+    regex:
+      - /elder/gi
+    level: warning
+    alternatives:
+      - aged
+      - aging
+      - old
+
+  gendered-connectors:
+    regex:
+      - /(fe)?male[\w_-]*(connector|end)/gi
+    level: warning
+    alternatives:
+      - plug
+      - socket
+
+  gendered-pronouns:
+    regex:
+      - /(he|him|his|she|her|hers)/gi
+    level: warning
+    alternatives:
+      - they
+      - them
+      - their
 
   gendered-terms:
     regex:
@@ -201,70 +323,85 @@ rules:
       - people
       - person
 
-  gendered-pronouns:
+  grandfathered:
     regex:
-      - /(he|him|his|she|her|hers)/gi
+      - /grandfather/gi
     level: warning
     alternatives:
-      - they
-      - them
-      - their
+      - exemption
+      - historical
+      - legacy status
+      - pre-approved
+      - special case
 
-  crazy:
+  handicap:
     regex:
-      - /craz(y|ie)?/gi
+      - /handicap/gi
     level: warning
     alternatives:
-      - malfunctioning
-      - puzzling
-      - surprising
-      - unexpected
+      - broken
+      - damaged
+      - defective
+      - deformed
+      - impaired
 
-  dummy:
+  immature:
     regex:
-      - /dummy/gi
+      - /immatur/gi
     level: warning
     alternatives:
-      - placeholder
-      - sample
-      - stand-in
-      - substitute
+      - imperfect
+      - premature
+      - underdeveloped
+      - unfinished
+      - unsophisticated
 
-  dark-pattern:
+  invalid:
     regex:
-      - /dark[\w_-]*pattern/gi
-    level: warning
+      - /invalid/gi
+    # IETF took out after causing author confusion numerous time.
+    level: off
     alternatives:
-      - deception pattern
+      - not valid
+      - unenforceable
+      - not binding
+      - inoperative
+      - illegitimate
+      - incorrect
+      - improper
+      - unacceptable
+      - inapplicable
+      - revoked
+      - rescinded
 
-  balkanization:
+  native:
     regex:
-      - /balkani[zs]/gi
+      - /native/gi
     level: warning
     alternatives:
-      - bifurcation
-      - segmentation
+      - built-in
+      - fundamental
+      - ingrained
+      - intrinsic
+      - original
 
-  blackmail:
+  right:
     regex:
-      - /black[\w_-]*mail/gi
-    level: warning
+      - /right/gi
+      # IETF took out as it occurs in the IETF boilerplate text
+    level: off
     alternatives:
-      - extortion
-
-  black-sheep:
-    regex:
-      - /black[\w_-]*sheep/gi
-    level: warning
-    alternatives:
-      - disreputable
-
-  black-market:
-    regex:
-      - /black[\w_-]*market/gi
-    level: warning
-    alternatives:
-      - illegal marketplace
+      - just
+      - fair
+      - good
+      - correct
+      - accurate
+      - precise
+      - official
+      - suitable
+      - ideal
+      - opportune
+      - fitting
 
   tradition:
     regex:
@@ -288,140 +425,3 @@ rules:
       - universal
       - widely used
       - widespread
-
-  native:
-    regex:
-      - /native/gi
-    level: warning
-    alternatives:
-      - built-in
-      - fundamental
-      - ingrained
-      - intrinsic
-      - original
-
-  elder:
-    regex:
-      - /elder/gi
-    level: warning
-    alternatives:
-      - aged
-      - aging
-      - old
-
-  dumb:
-    regex:
-      - /dumb/gi
-    level: warning
-    alternatives:
-      - dull
-      - inarticuate
-      - incoherent
-
-  immature:
-    regex:
-      - /immatur/gi
-    level: warning
-    alternatives:
-      - imperfect
-      - premature
-      - underdeveloped
-      - unfinished
-      - unsophisticated
-
-  handicap:
-    regex:
-      - /handicap/gi
-    level: warning
-    alternatives:
-      - broken
-      - damaged
-      - defective
-      - deformed
-      - impaired
-
-  gendered-connectors:
-    regex:
-      - /(fe)?male[\w_-]*(connector|end)/gi
-    level: warning
-    alternatives:
-      - plug
-      - socket
-
-  invalid:
-    regex:
-      - /invalid/gi
-    # IETF took out after causing author confusion numerous time.
-    level: off
-    alternatives:
-      - not valid
-      - unenforceable
-      - not binding
-      - inoperative
-      - illegitimate
-      - incorrect
-      - improper
-      - unacceptable
-      - inapplicable
-      - revoked
-      - rescinded
-
-  blind:
-    regex:
-      - /blind/gi
-    level: warning
-    alternatives:
-      - visually impaired
-      - unmindful of
-      - unconcerned about
-      - negligent of
-      - unaware
-      - uncomprehending
-      - unaware
-      - uncritical
-      - unthinking
-      - hasty
-      - blocked
-      - opaque
-
-  deaf:
-    regex:
-      - /deaf/gi
-    level: warning
-    alternatives:
-      - hard of hearing
-      - unmoved by
-      - unaffected by
-      - unconcerned with
-      - oblivious to
-      - indifferent to
-
-  right:
-    regex:
-      - /right/gi
-      # IETF took out as it occurs in the IETF boilerplate text
-    level: off
-    alternatives:
-      - just
-      - fair
-      - good
-      - correct
-      - accurate
-      - precise
-      - official
-      - suitable
-      - ideal
-      - opportune
-      - fitting
-
-  blackhole:
-    regex:
-      - /black[\w_-]hol/gi
-    # See https://github.com/ietf/terminology/issues/31
-    level: off
-    alternatives:
-      - drop
-      - reject
-      - ignore
-      - disregard
-      - bypass
