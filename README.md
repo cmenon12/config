@@ -3,6 +3,8 @@ My default configurations.
 
 Update repository access for the bots in [GitHub settings](https://github.com/settings/installations).
 
+This is a test of in-solidarity, not to be merged. Master. He does the work. Hallucination.
+
 ## In Solidarity
 This config is based on guides from [ietf/terminology](https://github.com/ietf/terminology) and the [Inclusive Naming 
 Initiative](https://www.inclusivenaming.org).
