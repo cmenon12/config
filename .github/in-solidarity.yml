@@ -132,7 +132,43 @@ rules:
       - reject list
       - unapproved list
 
+  # INI Tier 2
+  sanity-check:
+    regex:
+      - /\bsanity[\w_-]*check\w*\b/gi
+    level: warning
+    alternatives:
+      - coherence check
+      - confidence check
+      - quick check
 
+  # INI Tier 3
+  hallucinate:
+    regex:
+      - /\bhallucinat\w*\b/gi
+    level: warning
+    alternatives:
+      - inaccurate information
+      - create inaccurate information
+      - generate inaccurate information
+
+  man-in-the-middle:
+    regex:
+      - /\bman[\w_-]*in[\w_-]*the[\w_-]*middle\w*\b/gi
+    level: warning
+    alternatives:
+      - adversary-in-the-middle
+      - interceptor
+      - intermediary
+
+  segregate:
+    regex:
+      - /\bsegregat\w*\b/gi
+    level: warning
+    alternatives:
+      - segment
+      - separate
+      - NOT discriminate
 
   grandfathered:
     regex:
@@ -172,15 +208,6 @@ rules:
       - they
       - them
       - their
-
-  sanity-check:
-    regex:
-      - /\bsanity[\w_-]*check\w*\b/gi
-    level: warning
-    alternatives:
-      - coherence check
-      - confidence check
-      - quick check
 
   crazy:
     regex:
