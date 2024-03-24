@@ -18,33 +18,59 @@ ignore:
 ignoreDefaults: true
 
 rules:
-  whitelist:
-    regex:
-      - /\bwhite[\w_-]*list\w*\b/gi
-    level: warning
-    alternatives:
-      - accept list
-      - allowlist
-      - approved list
-      - pass list
-      - permitted
 
-  blacklist:
+  # INI Tier 1
+  abort:
     regex:
-      - /\bblack[\w_-]*list\w*\b/gi
-    level: warning
+      - /\babort\w*\b/gi
+    level: failure
     alternatives:
-      - blocklist
-      - denylist
-      - prohibited
-      - refused
-      - reject list
-      - unapproved list
+      - user-initiated termination
+      - force quit
+      - cancel
+      - system-initiated termination
+      - fail
+      - close (app, program, connection)
+      - end
+      - halt
+      - hard stop
+      - stop (something you triggered)
+      - NOT kill
+
+  whitehat:
+    regex:
+      - /\bwhite[\w_-]*hat\w*\b/gi
+    level: failure
+    alternatives:
+      - ethical hacker
+
+  blackhat:
+    regex:
+      - /\bblack[\w_-]*hat\w*\b/gi
+    level: failure
+    alternatives:
+      - unethical hacker
+      - attacker
+
+  cripple:
+    regex:
+      - /\bcrippl\w*\b/gi
+    level: failure
+    alternatives:
+      - impacted
+      - degraded
+      - restricted
+      - immobilised
+      - broken
+      - damaged
+      - defective
+      - deformed
+      - impaired
 
   master:
     regex:
       - /\bmaster\w*\b/gi
-    level: warning
+    level: failure
     alternatives:
       - active
       - central
@@ -55,11 +81,14 @@ rules:
       - parent
       - primary
       - server
+      - original
+      - source
+      - control plane
 
   slave:
     regex:
       - /\bslave\w*\b/gi
-    level: warning
+    level: failure
     alternatives:
       - follower
       - peripheral
@@ -68,6 +97,42 @@ rules:
       - secondary
       - standby
       - worker
+      - control plane node
+      - doer
+      - child
+
+  tribe:
+    regex:
+      - /\btribe\w*\b/gi
+    level: failure
+    alternatives:
+      - team
+      - squad of squads
+
+  whitelist:
+    regex:
+      - /\bwhite[\w_-]*list\w*\b/gi
+    level: failure
+    alternatives:
+      - accept list
+      - allowlist
+      - approved list
+      - pass list
+      - permitted
+
+  blacklist:
+    regex:
+      - /\bblack[\w_-]*list\w*\b/gi
+    level: failure
+    alternatives:
+      - blocklist
+      - denylist
+      - prohibited
+      - refused
+      - reject list
+      - unapproved list
+
+
 
   grandfathered:
     regex:
@@ -235,17 +300,6 @@ rules:
       - underdeveloped
       - unfinished
       - unsophisticated
-
-  cripple:
-    regex:
-      - /\bcrippl\w*\b/gi
-    level: warning
-    alternatives:
-      - broken
-      - damaged
-      - defective
-      - deformed
-      - impaired
 
   handicap:
     regex:
