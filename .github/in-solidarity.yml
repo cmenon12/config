@@ -249,7 +249,7 @@ rules:
 
   deaf:
     regex:
-      - /deaf/gi
+      - /\bdeaf\b/gi
     level: warning
     alternatives:
       - hard of hearing
@@ -297,7 +297,7 @@ rules:
 
   gendered-pronouns:
     regex:
-      - /(he|him|his|she|her|hers)/gi
+      - /\b(he|him|his|she|her|hers)\b/gi
     level: warning
     alternatives:
       - they
