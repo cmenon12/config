@@ -136,7 +136,7 @@ rules:
   sanity-check:
     regex:
       - /sanity[\w_-]*check/gi
-    level: warning
+    level: failure
     alternatives:
       - coherence check
       - confidence check
