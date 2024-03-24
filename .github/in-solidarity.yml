@@ -310,6 +310,7 @@ rules:
       - /mankind/gi
       - /man[\w_-]*month/gi
       - /mans/gi
+      - /man[\w_-]*hour/gi
       - /man[\w_-]*made/gi
       - /man[\w_-]*power/gi
       - /guys?/gi
