@@ -69,7 +69,7 @@ rules:
 
   master:
     regex:
-      - /master/gi
+      - /master(?!.mind)(?!.inventor)/gi
     level: failure
     alternatives:
       - active
