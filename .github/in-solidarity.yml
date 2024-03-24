@@ -22,7 +22,7 @@ rules:
   # INI Tier 1
   abort:
     regex:
-      - /\babort\w*\b/gi
+      - /abort/gi
     level: failure
     alternatives:
       - user-initiated termination
@@ -39,14 +39,14 @@ rules:
 
   whitehat:
     regex:
-      - /\bwhite[\w_-]*hat\w*\b/gi
+      - /white[\w_-]*hat/gi
     level: failure
     alternatives:
       - ethical hacker
 
   blackhat:
     regex:
-      - /\bblack[\w_-]*hat\w*\b/gi
+      - /black[\w_-]*hat/gi
     level: failure
     alternatives:
       - unethical hacker
@@ -54,7 +54,7 @@ rules:
 
   cripple:
     regex:
-      - /\bcrippl\w*\b/gi
+      - /crippl/gi
     level: failure
     alternatives:
       - impacted
@@ -69,7 +69,7 @@ rules:
 
   master:
     regex:
-      - /\bmaster\w*\b/gi
+      - /master/gi
     level: failure
     alternatives:
       - active
@@ -87,7 +87,7 @@ rules:
 
   slave:
     regex:
-      - /\bslave\w*\b/gi
+      - /slave/gi
     level: failure
     alternatives:
       - follower
@@ -103,7 +103,7 @@ rules:
 
   tribe:
     regex:
-      - /\btribe\w*\b/gi
+      - /tribe/gi
     level: failure
     alternatives:
       - team
@@ -111,7 +111,7 @@ rules:
 
   whitelist:
     regex:
-      - /\bwhite[\w_-]*list\w*\b/gi
+      - /white[\w_-]*list/gi
     level: failure
     alternatives:
       - accept list
@@ -122,7 +122,7 @@ rules:
 
   blacklist:
     regex:
-      - /\bblack[\w_-]*list\w*\b/gi
+      - /black[\w_-]*list/gi
     level: failure
     alternatives:
       - blocklist
@@ -135,7 +135,7 @@ rules:
   # INI Tier 2
   sanity-check:
     regex:
-      - /\bsanity[\w_-]*check\w*\b/gi
+      - /sanity[\w_-]*check/gi
     level: warning
     alternatives:
       - coherence check
@@ -145,7 +145,7 @@ rules:
   # INI Tier 3
   hallucinate:
     regex:
-      - /\bhallucinat\w*\b/gi
+      - /hallucinat/gi
     level: warning
     alternatives:
       - inaccurate information
@@ -154,7 +154,7 @@ rules:
 
   man-in-the-middle:
     regex:
-      - /\bman[\w_-]*in[\w_-]*the[\w_-]*middle\w*\b/gi
+      - /man[\w_-]*in[\w_-]*the[\w_-]*middle/gi
     level: warning
     alternatives:
       - adversary-in-the-middle
@@ -163,7 +163,7 @@ rules:
 
   segregate:
     regex:
-      - /\bsegregat\w*\b/gi
+      - /segregat/gi
     level: warning
     alternatives:
       - segment
@@ -173,7 +173,7 @@ rules:
   # IETF
   grandfathered:
     regex:
-      - /\bgrandfather\w*\b/gi
+      - /grandfather/gi
     level: warning
     alternatives:
       - exemption
@@ -184,17 +184,17 @@ rules:
 
   gendered-terms:
     regex:
-      - /\bchair[\w_-]*man\w*\b/gi
-      - /\bmankind\b/gi
-      - /\bman[\w_-]*month\w*\b/gi
-      - /\bmans\b/gi
-      - /\bman[\w_-]*made\w*\b/gi
-      - /\bman[\w_-]*power\w*\b/gi
-      - /\bguys?\b/gi
-      - /\b(wo)?m[ae]n\b/gi
-      - /\b(fe)?male\w*\b/gi
-      - /\blad(y|ie)\'?s?\'?\b/gi
-      - /\b(\w+m[ae]nship)\b/gi
+      - /chair[\w_-]*man/gi
+      - /mankind/gi
+      - /man[\w_-]*month/gi
+      - /mans/gi
+      - /man[\w_-]*made/gi
+      - /man[\w_-]*power/gi
+      - /guys?/gi
+      - /(wo)?m[ae]n/gi
+      - /(fe)?male/gi
+      - /lad(y|ie)\'?s?\'?/gi
+      - /(\w+m[ae]nship)/gi
     level: warning
     alternatives:
       - individual
@@ -203,7 +203,7 @@ rules:
 
   gendered-pronouns:
     regex:
-      - /\b(he|him|his|she|her|hers)\b/gi
+      - /(he|him|his|she|her|hers)/gi
     level: warning
     alternatives:
       - they
@@ -212,7 +212,7 @@ rules:
 
   crazy:
     regex:
-      - /\bcraz(y|ie)?\w*\b/gi
+      - /craz(y|ie)?/gi
     level: warning
     alternatives:
       - malfunctioning
@@ -222,7 +222,7 @@ rules:
 
   dummy:
     regex:
-      - /\bdummy\w*\b/gi
+      - /dummy/gi
     level: warning
     alternatives:
       - placeholder
@@ -232,14 +232,14 @@ rules:
 
   dark-pattern:
     regex:
-      - /\bdark[\w_-]*pattern\w*\b/gi
+      - /dark[\w_-]*pattern/gi
     level: warning
     alternatives:
       - deception pattern
 
   balkanization:
     regex:
-      - /\bbalkani[zs]\w*\b/gi
+      - /balkani[zs]/gi
     level: warning
     alternatives:
       - bifurcation
@@ -247,28 +247,28 @@ rules:
 
   blackmail:
     regex:
-      - /\bblack[\w_-]*mail\w*\b/gi
+      - /black[\w_-]*mail/gi
     level: warning
     alternatives:
       - extortion
 
   black-sheep:
     regex:
-      - /\bblack[\w_-]*sheep\w*\b/gi
+      - /black[\w_-]*sheep/gi
     level: warning
     alternatives:
       - disreputable
 
   black-market:
     regex:
-      - /\bblack[\w_-]*market\w*\b/gi
+      - /black[\w_-]*market/gi
     level: warning
     alternatives:
       - illegal marketplace
 
   tradition:
     regex:
-      - /\btradition\w*\b/gi
+      - /tradition/gi
     level: warning
     alternatives:
       - classic
@@ -291,7 +291,7 @@ rules:
 
   native:
     regex:
-      - /\bnative\w*\b/gi
+      - /native/gi
     level: warning
     alternatives:
       - built-in
@@ -302,7 +302,7 @@ rules:
 
   elder:
     regex:
-      - /\belder\w*\b/gi
+      - /elder/gi
     level: warning
     alternatives:
       - aged
@@ -311,7 +311,7 @@ rules:
 
   dumb:
     regex:
-      - /\bdumb\w*\b/gi
+      - /dumb/gi
     level: warning
     alternatives:
       - dull
@@ -320,7 +320,7 @@ rules:
 
   immature:
     regex:
-      - /\bimmatur\w*\b/gi
+      - /immatur/gi
     level: warning
     alternatives:
       - imperfect
@@ -331,7 +331,7 @@ rules:
 
   handicap:
     regex:
-      - /\bhandicap\w*\b/gi
+      - /handicap/gi
     level: warning
     alternatives:
       - broken
@@ -342,7 +342,7 @@ rules:
 
   gendered-connectors:
     regex:
-      - /\b(fe)?male[\w_-]*(connector|end)\w*\b/gi
+      - /(fe)?male[\w_-]*(connector|end)/gi
     level: warning
     alternatives:
       - plug
@@ -350,7 +350,7 @@ rules:
 
   invalid:
     regex:
-      - /\binvalid\w*\b/gi
+      - /invalid/gi
     # IETF took out after causing author confusion numerous time.
     level: off
     alternatives:
@@ -368,7 +368,7 @@ rules:
 
   blind:
     regex:
-      - /\bblind\w*\b/gi
+      - /blind/gi
     level: warning
     alternatives:
       - visually impaired
@@ -386,7 +386,7 @@ rules:
 
   deaf:
     regex:
-      - /\bdeaf\w*\b/gi
+      - /deaf/gi
     level: warning
     alternatives:
       - hard of hearing
@@ -398,7 +398,7 @@ rules:
 
   right:
     regex:
-      - /\bright\w*\b/gi
+      - /right/gi
       # IETF took out as it occurs in the IETF boilerplate text
     level: off
     alternatives:
@@ -416,7 +416,7 @@ rules:
 
   blackhole:
     regex:
-      - /\bblack[\w_-]hol\w*\b/gi
+      - /black[\w_-]hol/gi
     # See https://github.com/ietf/terminology/issues/31
     level: off
     alternatives:
