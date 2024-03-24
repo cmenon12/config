@@ -25,6 +25,8 @@ Use this in another repo by adding the code below to `renovate.json`.
 }
 ```
 
+The label used to denote dependencies is `dependencies`, in colour `#A141FA`.
+
 Note that this sets [`"ignoreTests": true`](https://docs.renovatebot.com/configuration-options/#ignoretests) because 
 almost all of my repositories don't have any tests or status checks. Make sure to set this to `false` if you repository does.
 
