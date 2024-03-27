@@ -308,16 +308,16 @@ rules:
     regex:
       - /chair[\w_-]*man/gi
       - /mankind/gi
-      - /man[\w_-]*month/gi
-      - /mans/gi
+      - /\bman[\w_-]*month\b/gi
+      - /\bmans\b/gi
       - /man[\w_-]*hour/gi
       - /man[\w_-]*made/gi
       - /man[\w_-]*power/gi
-      - /guys?/gi
-      - /(wo)?m[ae]n/gi
-      - /(fe)?male/gi
-      - /lad(y|ie)\'?s?\'?/gi
-      - /(\w+m[ae]nship)/gi
+      - /\bguys?\b/gi
+      - /\b(wo)?m[ae]n\b/gi
+      - /\b(fe)?male\b/gi
+      - /\blad(y|ie)\'?s?\'?\b/gi
+      - /\b(\w+m[ae]nship)\b/gi
     level: warning
     alternatives:
       - individual
