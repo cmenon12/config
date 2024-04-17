@@ -20,8 +20,8 @@
     "{{#if isMajor}}:rotating_light: Be careful, this is a major update.{{/if}}",
     "{{#if (equals updateType 'minor')}}:warning: This is a minor update.{{/if}}"
   ],
-  "prConcurrentLimit": 20,
-  "prHourlyLimit": 10,
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 0,
   "prTitleStrict": true,
   "rebaseWhen": "behind-base-branch",
   "separateMinorPatch": true,
@@ -36,19 +36,10 @@
     "automerge": true,
     "description": "Group and automerge all patch updates together"
   },
-  "minor": {
-    "dependencyDashboardApproval": true,
-    "description": "Require dashboard approval to create minor PRs"
-  },
-  "major": {
-    "dependencyDashboardApproval": true,
-    "description": "Require dashboard approval to create major PRs"
-  },
   "packageRules": [
     {
       "matchPackageNames": ["google-api-python-client"],
       "matchUpdateTypes": ["minor"],
-      "dependencyDashboardApproval": false,
       "automerge": true,
       "description": "Automerge minor updates for this package"
     }
