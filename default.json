@@ -31,12 +31,13 @@
   "platformCommit": true,
   "automergeType": "branch",
   "ignoreTests": true,
-  "patch": {
-    "groupName": "all patch updates",
-    "automerge": true,
-    "description": "Group and automerge all patch updates together"
-  },
   "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "groupName": "all patch updates",
+      "automerge": true,
+      "description": "Group and automerge all patch updates together"
+    }
     {
       "matchPackageNames": ["google-api-python-client"],
       "matchUpdateTypes": ["minor"],
