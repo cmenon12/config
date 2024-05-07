@@ -37,7 +37,7 @@
       "groupName": "all patch updates",
       "automerge": true,
       "description": "Group and automerge all patch updates together"
-    }
+    },
     {
       "matchPackageNames": ["google-api-python-client"],
       "matchUpdateTypes": ["minor"],
