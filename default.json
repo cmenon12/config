@@ -31,6 +31,7 @@
   "platformCommit": true,
   "automergeType": "branch",
   "ignoreTests": true,
+  "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
