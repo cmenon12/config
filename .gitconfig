@@ -1,0 +1,27 @@
+# With thanks to https://blog.gitbutler.com/how-git-core-devs-configure-git/
+[user]
+	name = Christopher Menon
+	email = 16004217+cmenon12@users.noreply.github.com
+[commit]
+	gpgsign = true
+[column]
+	ui = auto
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[clone]
+	defaultRemoteName = upstream
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
