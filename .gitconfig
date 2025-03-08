@@ -12,6 +12,8 @@
 	defaultBranch = main
 [clone]
 	defaultRemoteName = upstream
+[core]
+	commentchat = ";"
 [diff]
 	algorithm = histogram
 	colorMoved = plain
