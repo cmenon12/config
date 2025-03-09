@@ -8,7 +8,7 @@ The Git config has been supplemented with select options from [How Core Git Deve
 
 Note that the config won't be applied with the `.gitconfig` file in a repository, the contents should be added to `.git/config` within a repository or `~/.gitconfig` to apply globally. 
 
-The Git attributes will apply the specified filters in repositories that it's present in.
+The Git attributes will apply the specified filter in repositories that it's present in. Consider replacing `jupyter` with the full path to the Jupyter executable.
 
 Note that the `.gitignore` file is not a template; this is the `.gitignore` for this repository. See [github/gitignore](https://github.com/github/gitignore) for templates. 
 
