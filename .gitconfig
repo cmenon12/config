@@ -27,3 +27,7 @@
 	all = true
 [help]
 	autocorrect = prompt
+[filter "strip-notebook-output"]
+	clean = "jupyter nbconvert --ClearOutputPreprocessor.enabled=True --ClearMetadataPreprocessor.enabled=True --ClearMetadataPreprocessor.preserve_nb_metadata_mask="language_info" --to=notebook --stdin --stdout --log-level=ERROR"
+	smudge = "cat"
+	required
