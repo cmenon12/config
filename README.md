@@ -4,13 +4,13 @@ My default configurations.
 Update repository access for the bots in [GitHub settings](https://github.com/settings/installations).
 
 ## Git
-The Git config has been supplemented with select options from https://blog.gitbutler.com/how-git-core-devs-configure-git/. The `user.signingkey` option should also be configured with your GPG signing key ID.
+The Git config has been supplemented with select options from [How Core Git Developers Configure Git](https://blog.gitbutler.com/how-git-core-devs-configure-git/). The `user.signingkey` option should also be configured with your GPG signing key ID.
 
 Note that the config won't be applied with the `.gitconfig` file in a repository, the contents should be added to `.git/config` within a repository or `~/.gitconfig` to apply globally. 
 
 The Git attributes will apply the specified filters in repositories that it's present in.
 
-Note that the `.gitignore` file is not a template; this is the `.gitignore` for this repository. See https://github.com/github/gitignore for templates. 
+Note that the `.gitignore` file is not a template; this is the `.gitignore` for this repository. See [github/gitignore](https://github.com/github/gitignore) for templates. 
 
 ## In Solidarity
 This config is based on guides from [ietf/terminology](https://github.com/ietf/terminology) and the [Inclusive Naming 
