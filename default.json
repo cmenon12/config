@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "dependencyDashboardFooter": "View the logs [here](https://developer.mend.io/github/cmenon12/{{arg0}}).",
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
   "assignees": ["cmenon12"],
   "reviewers": ["cmenon12"],
   "commitMessageExtra": "{{#if isPinDigest}}from {{{currentDigestShort}}} to {{{newDigestShort}}}{{else}}{{#if isMajor}}from {{currentVersion}} to {{newVersion}} (major){{else}}{{#if isSingleVersion}}from {{currentVersion}} to {{newVersion}}{{else}}{{#if newValue}}from {{{currentValue}}} to {{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
@@ -24,14 +24,12 @@
   "prConcurrentLimit": 5,
   "prHourlyLimit": 0,
   "prTitleStrict": true,
-  "rebaseWhen": "behind-base-branch",
   "separateMinorPatch": true,
   "labels": [
     "dependencies"
   ],
-  "platformCommit": true,
+  "platformCommit": "enabled",
   "automergeType": "branch",
-  "ignoreTests": true,
   "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
